@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'main/base.html' %}
+{% block head_block %}
+<title>Newletter Usere</title>
+
+{% endblock %}
+
+{% block body_block  %}
+    
+<h3>list of interested people:  </h3>
+
+{% for person in userdict  %}
+<ul>
+    <li>{{person.name}}</li>
+    <li>{{person.phone_number}}</li>
+    <li>{{person.email}}</li>
+</ul>
+<hr>
+
+{% endfor %}
+
+
+
+    
+    {% endblock  %}

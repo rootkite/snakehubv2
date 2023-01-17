@@ -1,0 +1,32 @@
+<!DOCTYPE html> {% extends 'main/base.html' %} {% block head_block %}
+<title>RegisterUser</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+<hr>
+<h2>this is SnakeHub SignUp Page</h2>
+<hr> 
+{% if registered %}
+<h2>Thank you for registration!</h2>
+{% else %}
+<h2>Register Here </h2>
+<h3>Fill Out The Form :  </h3>
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
+
+    <input type="submit" value="register">
+
+
+
+
+</form>
+
+
+
+{% endif %}
+{% endblock %}

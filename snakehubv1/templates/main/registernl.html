@@ -1,0 +1,13 @@
+<!DOCTYPE html> {% extends 'main/base.html' %} {% block head_block %}
+<title>Register</title>
+
+{% endblock %} {% block body_block %}
+
+
+<h1>register (only for NewsLetter) </h1>
+<h4>complete the info and hit submit to join the newsletter and get notfied by updates!</h4>
+<form method="POST">
+    {{form.as_p}} {% csrf_token %}
+    <input type="submit" class='btn btn-dark'>
+</form>
+{% endblock %}
